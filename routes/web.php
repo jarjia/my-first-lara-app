@@ -32,4 +32,4 @@ Route::get('/posts/{post}', function ($slug) {
     return view('post', [
         'post' => $post
     ]);
-});
+})->where('post', '[A-z_\-]+'); // This is so we can restrict use of unnecessary characters in URL.
